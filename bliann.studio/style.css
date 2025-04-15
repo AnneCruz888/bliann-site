@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:#5a4d6f;
+  color: #eaeaea;
+}
+
+.hero-banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  z-index: 0;
+}
+
+.overlay {
+  background: linear-gradient(to bottom, #0d0d0c88, #0d0d0dd0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slogan {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #b77eff;
+  animation: fadeIn 2s ease;
+}
+
+.slogan h1 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 4rem;
+    color: #b77eff; /* ou outra cor que combine com seu fundo */
+    margin: 0;
+  }
+  
+
+.slogan p {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    color: #eaeaea;
+  }
+   
+
+section {
+  padding: 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: slideUp 1.2s ease;
+}
+
+h2 {
+  color: #b77eff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+ul {
+  list-style: square;
+  padding-left: 1.5rem;
+}
+
+.galeria .grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #b77eff44;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.botao-agendar {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #b77eff;
+  color: #0d0d0d;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.botao-agendar:hover {
+  background-color: #a05eff;
+}
+
+.links-sociais {
+  margin-top: 1rem;
+}
+
+.links-sociais a {
+  margin-right: 1rem;
+  color: #b77eff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links-sociais a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #aaa;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.frase-destaque {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  color: #eaeaea;
+  animation: fadeIn 1.5s ease;
+
+}
+
+.linha-decorativa {
+  height: 2px;
+  width: 80%;
+  margin: 1rem auto 1rem;
+  background: linear-gradient(to right, #b77eff, #ff9bce, #b77eff);
+  border-radius: 2px;
+  animation: fadeIn 2s ease;
+}
+
+.icone-decorativo {
+  text-align: center;
+  font-size: 2rem;
+  color: #b77eff;
+  margin-top: -0.5rem;
+  animation: fadeIn 2s ease;
+}
+
+.lua-animada {
+  width: 150px;
+  animation: flutuar 3s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Para centralizar o ícone ou estilizar o bloco */
+.decorativo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
